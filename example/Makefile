@@ -1,13 +1,13 @@
-.PHONY: slides.pdf all clean softclean hardclean live
+.PHONY: example.pdf all clean softclean hardclean live
 
-export TEXINPUTS=.:./tex-custom//:
+export TEXINPUTS=.:./tex-custom//:../theme//:
 
-all: slides.pdf
+all: example.pdf
 
-slides.pdf: slides.tex
+example.pdf: example.tex
 	latexmk -pdf -xelatex -shell-escape -use-make $<
 
-live: slides.tex
+live: example.tex
 	latexmk -f -pvc -pdf -xelatex -shell-escape -use-make $<
 
 softclean:
@@ -20,7 +20,7 @@ softclean:
 	rm -rf *.nav
 	rm -rf *.snm
 	rm -rf *.fdb_latexmk
-	rm -rf slides.out
+	rm -rf example.out
 	rm -rf *.toc
 	rm -rf *.log
 
