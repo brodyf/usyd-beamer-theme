@@ -13,6 +13,15 @@
 \usepackage{fontspec}
 \usepackage{tikz}
 
+% add an option to the theme called nosection
+% if specified in the tex file like this:
+%  \usetheme[nosection]{usyd}
+% then section page frames won't be automatically generated
+\newif\if@nosection
+\@nosectionfalse
+\DeclareOption{nosection}{\@nosectiontrue}
+\ProcessOptions
+
 \setsansfont[BoldFont = Tw Cen MT Bold]{Tw Cen MT}
 
 \newcommand\sectiongraphic[1]{\def\insertsectiongraphic{#1}}
@@ -131,6 +140,8 @@
 
 % Automatically create section pages at each new section
 % and use usydblue as the background colour.
+\if@nosection
+\else
 \AtBeginSection{
   \begingroup
     \setbeamercolor{background canvas}{bg=usydblue}
@@ -139,6 +150,7 @@
     \frame[c]{\sectionpage}
   \endgroup
 }
+\fi
 
 \setbeamertemplate{itemize item}{\textbf{--}}
 
