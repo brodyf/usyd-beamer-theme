@@ -49,6 +49,6 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.3462006)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{usyd-logo.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{images/usyd-logo-white.pdf}}%
   \end{picture}%
 \endgroup%
