@@ -3,9 +3,10 @@
 An unofficial [Beamer](https://en.wikipedia.org/wiki/Beamer_(LaTeX)) theme for
 the [University of Sydney](http://sydney.edu.au)'s latest redesign.
 
-See `example/example.tex` for a reference file, and `example/example.pdf` for
-the output. This example is compiled using the command `xelatex example.tex` or
-`make all softclean`.
+See `example/example.tex` for a reference file, and
+[`example/example.pdf`](https://github.com/lexibrent/usyd-beamer-theme/blob/master/example/example.pdf)
+for the output. This example is compiled using the command `xelatex
+example.tex` or `make all softclean`.
 
 To use this theme, use a copy of `example/` as your project directory and edit
 `Makefile` to fix the path to `theme/` in `TEXINPUTS` on line 3.
