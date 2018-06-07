@@ -1,24 +1,22 @@
-\documentclass[compress]{beamer}
+\documentclass[compress,t]{beamer}
 \usetheme{usyd}
 
-\title{Title}
-\author{Author}
-\institute{Institution}
-
-% Logo of USYD
-\titlegraphic{
-  \def\svgwidth{0.55\columnwidth}
-  \input{usyd-logo.pdf_tex}
-}
+\title{Presentation title}
+\subtitle{Presentation subtitle}
+\author{Firstname Lastname}
+\institute{Faculty, centre or unit}
 
 \begin{document}
-  \begin{frame}[plain]
+  \setbeamercolor{background canvas}{bg=usydorange}
+  \begin{frame}[plain,b]
     \titlepage
   \end{frame}
+  \setbeamercolor{background canvas}{bg=white}
 
-  \section{Section 1}
+  \section{Introduction}
   \subsection{Subsection 1}
   \begin{frame}{Section 1 - Subsection 1 - Frame 1}
+    \framesubtitle{Frame Subtitle}
     \begin{itemize}
       \item Item 1
       \item Item 2
