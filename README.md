@@ -1,16 +1,19 @@
-An unofficial [Beamer](https://en.wikipedia.org/wiki/Beamer_(LaTeX)) theme for the [University of Sydney](http://sydney.edu.au)'s latest redesign.
+# usyd-beamer-theme
 
-Move the `beamerthemeusyd.sty`, `usyd-logo.pdf`, and `usyd-logo.pdf_tex` to the root folder of your project. In the premable of your main `.tex` file, add
+An unofficial [Beamer](https://en.wikipedia.org/wiki/Beamer_(LaTeX)) theme for
+the [University of Sydney](http://sydney.edu.au)'s latest redesign.
 
-	\usetheme{usyd}
-	...
-	\titlegraphic{
-			\def\svgwidth{0.55\columnwidth}
-			\input{usyd-logo.pdf_tex}
-	}
+See `example/example.tex` for a reference file, and `example/example.pdf` for
+the output. This example is compiled using the command `xelatex example.tex` or
+`make all softclean`.
 
-See `example.tex` for a reference file, and [`example.pdf`](https://github.com/mfjones/usyd-beamer-theme/blob/master/example.pdf) for the output. This example is compiled using the command `xelatex example.tex`.
+To use this theme, use a copy of `example/` as your project directory and edit
+`Makefile` to fix the path to `theme/` in `TEXINPUTS` on line 3.
 
-Make sure you have the font `Tw Cen MT` installed (this is the main font used by the theme). Depending on the location of the installed font, the path may need to be modified (line 14 of `beamerthemeusyd.sty`). Or, if it can't find the font and you already have it installed, try removing the `Path=...` in the `beamerthemeusyd.sty` file and let XeLaTeX find it automatically.
+Make sure you have the font `Tw Cen MT` installed (this is the main font used
+by the theme). 
 
-This theme is based off Cameron Bracken's theme, originally posted here: [cameron.bracken.bz/beamer-template](http://cameron.bracken.bz/beamer-template).
+This theme is based on [the one by
+mfjones](https://github.com/mfjones/usyd-beamer-theme), which itself is based
+on Cameron Bracken's theme, originally posted here:
+[cameron.bracken.bz/beamer-template](http://cameron.bracken.bz/beamer-template).

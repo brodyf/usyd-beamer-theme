@@ -1,13 +1,18 @@
-.PHONY: example.pdf all clean softclean hardclean live
+# Name of the input and output file. Change as desired:
+FILENAME = example
 
+.PHONY: $(FILENAME).pdf all clean softclean hardclean live
+
+# Path back to original theme + add a subdirectory tex-custom for any
+# custom LaTeX files which this one uses.
 export TEXINPUTS=.:./tex-custom//:../theme//:
 
-all: example.pdf
+all: $(FILENAME).pdf
 
-example.pdf: example.tex
+$(FILENAME).pdf: $(FILENAME).tex
 	latexmk -pdf -xelatex -shell-escape -use-make $<
 
-live: example.tex
+live: $(FILENAME).tex
 	latexmk -f -pvc -pdf -xelatex -shell-escape -use-make $<
 
 softclean:
@@ -20,7 +25,7 @@ softclean:
 	rm -rf *.nav
 	rm -rf *.snm
 	rm -rf *.fdb_latexmk
-	rm -rf example.out
+	rm -rf $(FILENAME).out
 	rm -rf *.toc
 	rm -rf *.log
 
