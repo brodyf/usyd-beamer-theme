@@ -1,4 +1,4 @@
-\documentclass[compress,t]{beamer}
+\documentclass[handout,compress,xcolor={dvipsnames,table},aspectratio=1610]{beamer}
 
 \usetheme{usyd}
 %\usetheme[nosection]{usyd} % use this one for no automatic section slides
@@ -55,5 +55,15 @@
       Let $G = (V,E)$ be a graph and $\deg(u)$ denote the degree of a vertex $u \in V$, then $$\sum_{u \in V} \deg(u) = 2 \vert E \vert.$$
     \end{theorem}
   \end{frame}
+
+  % Fixes a weird artifact that otherwise appears on the references slide
+  % \AtBeginSection{}
+  %
+  % \renewcommand{\bibfont}{\footnotesize}
+  % \begin{frame}[t,allowframebreaks]
+  % \frametitle{References}
+  % \bibliographystyle{ACM-Reference-Format}
+  % \bibliography{references}
+  % \end{frame}
 
 \end{document}
